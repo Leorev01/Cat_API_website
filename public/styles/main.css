@@ -23,7 +23,7 @@ body{
     border-radius: 10px;
     margin-right: 10vw;
     margin-left: 10vw;
-    z-index: 98;
+    gap: 10px;
 }
 form{
     display: flex;
@@ -59,4 +59,26 @@ h1 {
     font-family: "Bungee Spice", sans-serif;
     font-weight: 400;
     font-style: normal;
+  }
+
+  @media screen and (max-width: 787px) {
+    #buttons {
+        width: 50%;
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: stretch; /* Make buttons stretch to full width */
+        padding: 10px; /* Adjust padding for smaller screens */
+        margin: 5vh 25%; /* Adjust margin for better spacing */
+    }
+    #buttons button {
+        width: 100%; /* Make buttons take full width */
+        height: 30px; /* Adjust height for smaller screens */
+        font-size: medium; /* Adjust font size */
+        margin-bottom: 10px; /* Add spacing between buttons */
+    }
+    #buttons > * {
+        width: 100%; /* Ensure all children take full width */
+    }
+    input {
+        width: 100%; /* Make input fields take full width */
+    }
   }
