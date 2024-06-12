@@ -11,7 +11,9 @@
 </head>
 <body>
     <div id="content">
+        <!-- Container for heading -->
         <div id="heading">
+            <!-- Heading -->
             <% if(locals.image) {%>
                 <h1>Cats</h1>
                 <img src="<%=image%>" >
@@ -24,7 +26,9 @@
                 <img class="garfield" src="/images/garfield.png">
             <% } %>
         </div>
+        <!-- Container for buttons -->
         <div id="buttons">
+            <!-- Buttons -->
             <button type="submit" id="randomImage" onclick="window.location.href='/randomImage'">Random Cat Image</button>
             <button type="submit" id="randomGif" onclick="window.location.href='/randomGif'">Random Cat Gif</button>
             <form action="/catTalk" method="get">
