@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
+    <title>Cats</title>
+</head>
+<body>
+    <div id="content">
+        <div id="heading">
+            <% if(locals.image) {%>
+                <h1>Cats</h1>
+                <img src="<%=image%>" >
+            <%}else if (locals.error){%>
+                <h1>Press a button for a cat</h1>
+                <img class="garfield error" src="images/garfield_header.png">
+                <p class="text"><strong><%=locals.error%></strong></p>
+            <% }else{ %>
+                <h1>Press a button for a cat</h1>
+                <img class="garfield" src="/images/garfield.png">
+            <% } %>
+        </div>
+        <div id="buttons">
+            <button type="submit" id="randomImage" onclick="window.location.href='/randomImage'">Random Cat Image</button>
+            <button type="submit" id="randomGif" onclick="window.location.href='/randomGif'">Random Cat Gif</button>
+            <form action="/catTalk" method="get">
+                <input type="text" id="text" name="text" placeholder="Enter your text">
+                <button type="submit">Cat with your text</button>
+            </form>
+            <form action="/catTag" method="get">
+                <input type="text" id="tag" name="tag" placeholder="Enter image tag">
+                <button type="submit">Cat with tag</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
