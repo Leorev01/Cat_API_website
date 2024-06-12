@@ -1,4 +1,4 @@
-**Instructions to run website**
+**Instructions to run website:/n**
 Open a terminal window
 Navigate to directory
 In terminal window type "npm i". This installs all node extentions
