@@ -16,7 +16,6 @@ This website generates random cat images and GIFs using the [cataas.com API](htt
 ## Demo
 
 ![Cat API Website Screenshot](https://cataas.com/cat/says/Hello%20World!)  
-*(Replace this with your own screenshot if you like)*
 
 ---
 
